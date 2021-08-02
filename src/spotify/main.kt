@@ -1,17 +1,18 @@
 package spotify
 
-import spotify.functions.album
-import spotify.functions.track
-import spotify.functions.trocaAlbum
+import album
+import track
+import changeAlbum
+import java.util.*
 
 fun main(args: Array<String>) {
-    print("Qual álbum você gostaria de ouvir? ")
-    var escolhaAlbum = readLine()!!
-    album = escolhaAlbum
+    print("Which album would you like to listen?")
+    val chosenAlbum = readLine()!!.uppercase(Locale.getDefault())
+    album = chosenAlbum
 
-    print("Qual faixa você gostaria de ouvir? ")
-    var escolhaTrack = readLine()!!.toInt()
-    track = escolhaTrack
+    print("Which track would you like to listen? ")
+    val chooseTrack = readLine()!!.toInt()
+    track = chooseTrack
 
-    trocaAlbum()
+    changeAlbum()
 }

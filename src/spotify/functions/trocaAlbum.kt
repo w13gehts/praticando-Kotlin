@@ -1,19 +1,20 @@
-package spotify.functions
+import spotify.functions.notFound
 
 var artista = "Avril Lavigne"
 var album = ""
-var ano = ""
+var year = ""
 var track = 0
-var musica = ""
+var music = ""
 
-fun trocaAlbum() {
+fun changeAlbum() {
 
     if (artista == "Avril Lavigne") {
         when (album) {
-            "B-Sides" -> {
-                ano = "2001"
+            "BSIDES" -> {
+                album = "B-Sides"
+                year = "2001"
 
-                musica = when (track) {
+                music = when (track) {
                     1 -> "I Don't Give"
                     2 -> "Why"
                     3 -> "Get Over It"
@@ -36,10 +37,11 @@ fun trocaAlbum() {
                     }
                 }
             }
-            "Let Go" -> {
-                ano = "2002"
+            "LET GO" -> {
+                album = "Let Go"
+                year = "2002"
 
-                musica = when (track) {
+                music = when (track) {
                     1 -> "Losing Grip"
                     2 -> "Complicated"
                     3 -> "Sk8er Boi"
@@ -58,10 +60,11 @@ fun trocaAlbum() {
                     }
                 }
             }
-            "My World" -> {
-                ano = "2003"
+            "MY WORLD" -> {
+                album = "My World"
+                year = "2003"
 
-                musica = when (track) {
+                music = when (track) {
                     1 -> "Fuel (Cover)"
                     2 -> "Basketcase (Cover)"
                     3 -> "Unwanted (Live)"
@@ -73,10 +76,11 @@ fun trocaAlbum() {
                     }
                 }
             }
-            "Under My Skin" -> {
-                ano = "2004"
+            "UNDER MY SKIN" -> {
+                album = "Under My Skin"
+                year = "2004"
 
-                musica = when (track) {
+                music = when (track) {
                     1 -> "Take Me Away"
                     2 -> "Together"
                     3 -> "Don't Tell Me"
@@ -94,10 +98,11 @@ fun trocaAlbum() {
                     }
                 }
             }
-            "The Best Damn Thing" -> {
-                ano = "2007"
+            "THE BEST DAMN THING" -> {
+                album = "The Best Damn Thing"
+                year = "2007"
 
-                musica = when (track) {
+                music = when (track) {
                     1 -> "Girlfriend"
                     2 -> "I Can Do Better"
                     3 -> "Runaway"
@@ -115,10 +120,11 @@ fun trocaAlbum() {
                     }
                 }
             }
-            "Goodbye Lullaby" -> {
-                ano = "2011"
+            "GOODBYE LULLABY" -> {
+                album = "Goodbye Lullaby"
+                year = "2011"
 
-                musica = when (track) {
+                music = when (track) {
                     1 -> "Black Star"
                     2 -> "What The Hell"
                     3 -> "Push"
@@ -138,10 +144,11 @@ fun trocaAlbum() {
                     }
                 }
             }
-            "Avril Lavigne" -> {
-                ano = "2013"
+            "AVRIL LAVIGNE" -> {
+                album = "Avril Lavigne"
+                year = "2013"
 
-                musica = when (track) {
+                music = when (track) {
                     1 -> "Rock'n'roll"
                     2 -> "Here's To Never Growing Up"
                     3 -> "17"
@@ -159,12 +166,12 @@ fun trocaAlbum() {
                         return notFound()
                     }
                 }
-
             }
-            "Head Above Water" -> {
-                ano = "2019"
+            "HEAD ABOVE WATER" -> {
+                album = "Head Above Water"
+                year = "2019"
 
-                musica = when (track) {
+                music = when (track) {
                     1 -> "Head Above Water"
                     2 -> "Birdie"
                     3 -> "I Fell In Love With The Devil"
@@ -183,7 +190,8 @@ fun trocaAlbum() {
                 }
             }
         }
-        println("Now Listening: $track - $artista - $musica ($album, $ano)")
+
+        println("Now Listening: $track - $artista - $music ($album, $year)")
     }
 }
 
